@@ -2,6 +2,9 @@
 
 <div align="center">
 
+## Local Development
+To build and run this site locally with Docker, see [DOCKER_DEV.md](DOCKER_DEV.md).
+
 [![Preview](readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
 
 **A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**
