@@ -5,6 +5,6 @@ inline: true
 related_posts: true
 ---
 
-Welcome to my updated website! More details about how I buiilt the website can be found in [`this blog post`](/lucymthomas/blog/2026-01-17-vibe-coding-a-website.md)
+Welcome to my updated website! More details about how I buiilt it can be found in [`this blog post`](/lucymthomas/blog/2026-01-17-vibe-coding-a-website.md)
 
 ---
