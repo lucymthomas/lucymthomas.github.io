@@ -64,8 +64,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/lucymthomas/books/the_godfather/";
-            },},{id: "news-welcome-to-my-updated-website-more-details-about-how-i-buiilt-the-website-can-be-found-in-this-blog-post",
-          title: 'Welcome to my updated website! More details about how I buiilt the website...',
+            },},{id: "news-welcome-to-my-updated-website-more-details-about-how-i-buiilt-it-can-be-found-in-this-blog-post",
+          title: 'Welcome to my updated website! More details about how I buiilt it can...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
