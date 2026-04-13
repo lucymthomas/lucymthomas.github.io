@@ -10,7 +10,7 @@ This website was built using [`Github.io`](https://docs.github.com/en/pages), [`
 
 ---
 
-Firstly, I started with the template from [`al-folio`](https://github.com/alshedivat/al-folio) which makes use of [`Jekyll`](https://jekyllrb.com/). I highly recommend anyone with any software experience to use this, the setup instructions in `QUICKSTART.md` and `INSTALL.md` are very clear and the template is highly customisable. 
+Firstly, I started with the template from [`al-folio`](https://github.com/alshedivat/al-folio) which makes use of [`Jekyll`](https://jekyllrb.com/). I highly recommend anyone with any software experience to use this, the setup instructions in `QUICKSTART.md` and `INSTALL.md` are very clear and the template is highly customisable.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -50,13 +50,13 @@ Based on my albeit limited experience of vibe-coding, here are four lessons lear
 
 As an example, I gave the following prompt: "in light mode, the text which shows the date of the post isnt visible because its the same colour as the background, so can we change it to dark gray"
 
-This left too much room for interpretation, and `Claude` changed the text colour to light gravy *universally*, not just in light mode.
+This left too much room for interpretation, and `Claude` changed the text colour to light gravy _universally_, not just in light mode.
 
 Additionally, vague prompts like "optimise the code to make it cleaner" will cause timeouts, and may lead to unexpected behaviour.
 
 > (2) For the most insight about what the model is doing as it runs, set the reasoning depth to maximum
 
-This is helpful because it makes the model verbose so it fully describes what it is doing, and forces it to reason more fully and check its implementation. 
+This is helpful because it makes the model verbose so it fully describes what it is doing, and forces it to reason more fully and check its implementation.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -73,7 +73,7 @@ This will mean approval is requested before any code changes are kept or command
 
 > (4) Using the agent to write code you definitely can't write yourself isn't a good idea in general
 
-This one is a bit context-dependent. I think if all you care about is a final product (like in this case, I wasn't aiming to learn to be a web developer), then asking `Claude` to write code you don't understand is probably fine. Also this project was low-stakes, if it didn't work out then I'd fall back on my `Google sites` old website version, so failure didn't matter. 
+This one is a bit context-dependent. I think if all you care about is a final product (like in this case, I wasn't aiming to learn to be a web developer), then asking `Claude` to write code you don't understand is probably fine. Also this project was low-stakes, if it didn't work out then I'd fall back on my `Google sites` old website version, so failure didn't matter.
 
 But if you're attempting to use an AI agent to write complicated code for a physics project, where interpretation and intimate knowledge of the inner code workings is crucial, then I'd humbly suggest that if you yourself couldn't write the code `Claude` spits out at you, it's of no use to you.
 

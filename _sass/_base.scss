@@ -233,12 +233,13 @@ p.desc {
 
 // Site name: always lucy-soft-pink regardless of light/dark mode
 .site-name {
-  color: #FFC1CC !important;
+  color: #ffc1cc !important;
 }
 
 // About page: body text in light gray in dark mode (excludes headings, links, code)
 html[data-theme="dark"] .post article .clearfix {
-  p, li {
+  p,
+  li {
     color: $lucy-light-gray-color;
 
     a {
@@ -253,7 +254,8 @@ html[data-theme="dark"] .post article .clearfix {
 
 // News/post pages: body text in light gray in dark mode
 html[data-theme="dark"] .post-content {
-  p, li {
+  p,
+  li {
     color: $lucy-light-gray-color;
 
     a {
@@ -349,7 +351,7 @@ html[data-theme="dark"] {
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);

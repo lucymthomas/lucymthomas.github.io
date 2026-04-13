@@ -1,8 +1,8 @@
 (function () {
   function init() {
-    var heroBanner = document.querySelector('.hero-banner');
-    var heroText = document.querySelector('.hero-text');
-    var navbar = document.getElementById('navbar');
+    var heroBanner = document.querySelector(".hero-banner");
+    var heroText = document.querySelector(".hero-text");
+    var navbar = document.getElementById("navbar");
 
     if (!heroBanner || !heroText) return;
 
@@ -22,27 +22,30 @@
       if (!navbar) return;
       var navH = navbar.offsetHeight;
       if (window.scrollY <= navH) {
-        navbar.classList.add('navbar-hero-transparent');
+        navbar.classList.add("navbar-hero-transparent");
       } else {
-        navbar.classList.remove('navbar-hero-transparent');
+        navbar.classList.remove("navbar-hero-transparent");
       }
     }
 
     function update() {
       var t = Math.min(Math.max(window.scrollY, 0), maxTranslate);
-      heroText.style.transform = 'translateY(' + t + 'px)';
+      heroText.style.transform = "translateY(" + t + "px)";
       updateNavbar();
     }
 
     recalc();
     update();
 
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', function () { recalc(); update(); });
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", function () {
+      recalc();
+      update();
+    });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }

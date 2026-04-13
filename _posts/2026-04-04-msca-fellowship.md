@@ -11,7 +11,7 @@ I am thrilled to announce that I have been awarded a [Marie Skłodowska Curie Eu
 
 ---
 
-My proposed project *GWUMBLES: Gravitational Waveform Uncertainty in Modelling with Bayesian Machine-Learning Enhanced Surrogates* will allow us to account for the fact that our theoretical models of gravitational waves from merging black holes are not perfectly accurate. By building in this uncertainty to the model output, we make subsequent astrophysical conclusions we can draw gravitational wave data more robust. I will utilise cutting-edge machine learning techniques to build these new models, and then apply them to real gravitational wave data.
+My proposed project _GWUMBLES: Gravitational Waveform Uncertainty in Modelling with Bayesian Machine-Learning Enhanced Surrogates_ will allow us to account for the fact that our theoretical models of gravitational waves from merging black holes are not perfectly accurate. By building in this uncertainty to the model output, we make subsequent astrophysical conclusions we can draw gravitational wave data more robust. I will utilise cutting-edge machine learning techniques to build these new models, and then apply them to real gravitational wave data.
 
 ---
 
