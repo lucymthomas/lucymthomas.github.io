@@ -1,8 +1,10 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2026-01-17 16:11:00-0400
 inline: true
-related_posts: false
+related_posts: true
 ---
 
-A simple inline announcement.
+Welcome to my updated website! More details about how I buiilt the website can be found in [`this blog post`](/lucymthomas/blog/2026-01-17-vibe-coding-a-website.md)
+
+---

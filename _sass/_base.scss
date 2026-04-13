@@ -227,6 +227,177 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+p.desc {
+  color: var(--global-theme-color);
+}
+
+// Site name: always lucy-soft-pink regardless of light/dark mode
+.site-name {
+  color: #FFC1CC !important;
+}
+
+// About page: body text in light gray in dark mode (excludes headings, links, code)
+html[data-theme="dark"] .post article .clearfix {
+  p, li {
+    color: $lucy-light-gray-color;
+
+    a {
+      color: var(--global-theme-color);
+    }
+
+    code {
+      color: var(--global-text-color);
+    }
+  }
+}
+
+// News/post pages: body text in light gray in dark mode
+html[data-theme="dark"] .post-content {
+  p, li {
+    color: $lucy-light-gray-color;
+
+    a {
+      color: var(--global-theme-color);
+    }
+
+    code {
+      color: var(--global-text-color);
+    }
+  }
+}
+
+// Post meta date: restore light gray in dark mode
+html[data-theme="dark"] .post .post-meta {
+  color: $lucy-light-gray-color;
+}
+
+// Post list meta/tags: restore light gray in dark mode
+html[data-theme="dark"] .post-list li {
+  .post-meta,
+  .post-tags {
+    color: $lucy-light-gray-color;
+  }
+}
+
+// Post tags links: restore light gray in dark mode
+html[data-theme="dark"] .post .post-tags a,
+html[data-theme="dark"] .post-list li .post-tags a {
+  color: $lucy-light-gray-color;
+}
+
+// Navbar: inactive items light gray in dark mode; active/hover keep their colors
+html[data-theme="dark"] {
+  .navbar-brand,
+  .navbar-brand span,
+  .navbar-nav .nav-item .nav-link,
+  .navbar .dropdown-menu a:not(.active),
+  .dropdown-item {
+    color: $lucy-light-gray-color !important;
+  }
+
+  // Restore active and hover states
+  .navbar-nav .nav-item.active > .nav-link,
+  .navbar-nav .nav-item.active > .nav-link:hover {
+    color: var(--global-theme-color) !important;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover,
+  .navbar .dropdown-menu a:hover,
+  .dropdown-item:hover {
+    color: var(--global-hover-color) !important;
+  }
+
+  // Publications: authors (excl. self), journal/venue, and date in light gray
+  .publications ol.bibliography li {
+    .author {
+      color: $lucy-light-gray-color;
+    }
+
+    .periodical {
+      color: $lucy-light-gray-color;
+
+      em {
+        color: $lucy-light-gray-color;
+      }
+    }
+  }
+}
+
+// Hero banner for about page
+
+// Prevent margin collapse between container and hero so no gap appears at the top
+.hero-banner + .post {
+  display: flow-root;
+}
+
+// Ensure the container doesn't collapse margin with the hero's first child
+.hero-banner {
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: -56px; // cancel body fixed-nav padding (container mt-5 is omitted for hero pages via default.liquid)
+  border-top: none;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 25%;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .hero-image-credit {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.8rem;
+    z-index: 1;
+    margin: 0;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.75);
+
+    a {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: underline;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 1;
+
+    .hero-name {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: white;
+      margin: 0;
+    }
+  }
+}
+
+.about-section-heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
@@ -242,6 +413,34 @@ ul.task-list input[type="checkbox"] {
 }
 
 // Navbar customization
+
+// Transparent state when hero banner is visible at top of page
+.navbar-hero-transparent {
+  background-color: transparent !important;
+  border-bottom-color: transparent !important;
+  opacity: 1 !important;
+
+  .navbar-brand,
+  .nav-link,
+  .navbar-nav .nav-item .nav-link,
+  .navbar-nav .nav-item.active > .nav-link {
+    color: white !important;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover,
+  .navbar-nav .nav-item.active > .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  .icon-bar {
+    background-color: white !important;
+  }
+
+  // Make the theme toggle icon white in light mode (it's already visible in dark mode)
+  html:not([data-theme="dark"]) & #light-toggle {
+    color: white !important;
+  }
+}
 
 .navbar {
   box-shadow: none;
@@ -285,6 +484,10 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+
+    span {
+      color: inherit;
+    }
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -574,6 +777,14 @@ footer.sticky-bottom {
       padding: 1rem 0.5rem;
       color: var(--global-text-color-light);
     }
+
+    p {
+      color: $lucy-lavendar-color;
+    }
+
+    li i {
+      color: $lucy-lavendar-color;
+    }
   }
 }
 
@@ -595,13 +806,13 @@ footer.sticky-bottom {
     padding-bottom: 2rem;
 
     .post-meta {
-      color: var(--global-text-color-light);
+      color: $grey-color-dark;
       font-size: 0.875rem;
       margin-bottom: 0;
     }
 
     .post-tags {
-      color: var(--global-text-color-light);
+      color: $grey-color-dark;
       font-size: 0.875rem;
       padding-top: 0.25rem;
       padding-bottom: 0;
@@ -720,8 +931,8 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
+    color: $lucy-lavendar-color;
+    border-top: 1px solid $lucy-lavendar-color;
     padding-top: 1rem;
     margin-top: 2rem;
     text-align: right;
@@ -776,8 +987,10 @@ footer.sticky-bottom {
           }
         }
 
-        > em {
-          border-bottom: 1px solid;
+        > em,
+        > span.self-author {
+          color: var(--global-theme-color);
+          font-weight: 700;
           font-style: normal;
         }
 
@@ -916,19 +1129,19 @@ html.transition *:after {
 // Extra Markdown style (post Customization)
 .post {
   .post-meta {
-    color: var(--global-text-color-light);
+    color: $grey-color-dark;
     font-size: 0.875rem;
     margin-bottom: 0;
   }
 
   .post-tags {
-    color: var(--global-text-color-light);
+    color: $grey-color-dark;
     font-size: 0.875rem;
     padding-top: 0.25rem;
     padding-bottom: 1rem;
 
     a {
-      color: var(--global-text-color-light);
+      color: $grey-color-dark;
       text-decoration: none;
 
       &:hover {

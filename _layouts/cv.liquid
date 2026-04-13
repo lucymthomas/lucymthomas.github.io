@@ -24,10 +24,14 @@ layout: default
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
+      {% if page.cv_last_updated %}
+        <p class="post-description"><em>PDF last updated: {{ page.cv_last_updated }}</em></p>
+      {% endif %}
     </header>
 
     <article>
       <div class="cv">
+        {% unless page.under_construction %}
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
           <div class="card mt-3 p-3">
@@ -49,6 +53,7 @@ layout: default
             </div>
           </div>
         {% endfor %}
+        {% endunless %}
       </div>
     </article>
   </div>
@@ -75,10 +80,14 @@ layout: default
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
+      {% if page.cv_last_updated %}
+        <p class="post-description"><em>PDF last updated: {{ page.cv_last_updated }}</em></p>
+      {% endif %}
     </header>
 
     <article>
       <div class="cv">
+        {% unless page.under_construction %}
         {% for data in site.data.resume %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}
             {% unless site.jsonresume contains data[0] %}
@@ -121,6 +130,7 @@ layout: default
             </div>
           </div>
         {% endfor %}
+        {% endunless %}
       </div>
     </article>
   </div>
