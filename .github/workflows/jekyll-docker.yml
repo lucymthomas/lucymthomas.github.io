@@ -8,13 +8,15 @@ on:
 
 jobs:
   build:
-    runs-on: aarch64-linux-gnu
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.5"
-          bundler-cache: true
+          bundler-cache: false
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
       - name: Build the site
         run: bundle exec jekyll build --future
