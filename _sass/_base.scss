@@ -335,9 +335,8 @@ html[data-theme="dark"] {
 // Ensure the container doesn't collapse margin with the hero's first child
 .hero-banner {
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-top: -56px; // cancel body fixed-nav padding (container mt-5 is omitted for hero pages via default.liquid)
+  width: 100%;
+  margin-top: -56px; // cancel body fixed-nav padding
   border-top: none;
   height: 100vh;
   background-size: cover;
